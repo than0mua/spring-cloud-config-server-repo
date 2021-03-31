@@ -3,4 +3,8 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8090/eureka
+      defaultZone: http://eureka-server:8090/eureka
+zuul:
+  routes:
+    producer:
+      url: http://employee-producer:8080
